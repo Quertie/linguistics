@@ -22,7 +22,7 @@ function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|null>, transcripti
         audioRef.current?.play();
 }
 
-export function Example({Text, RP="", FrenchTrans="", FrenchRPTrans="", RPTrans=""}:{Text:string, RP?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string})
+export function Example({Text, FR="", FRRP= "", RP="", FrenchTrans="", FrenchRPTrans="", RPTrans=""}:{Text:string, FR?:string, FRRP?:string, RP?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string})
 {
     const frenchAudioRef = useRef<HTMLAudioElement>(null);
     const frenchTranscriptionRef = useRef<HTMLDivElement>(null);
@@ -51,10 +51,10 @@ export function Example({Text, RP="", FrenchTrans="", FrenchRPTrans="", RPTrans=
     
     return (
         <div className='mt-1 rounded'>{Text}
-        {RP!="" ?
-            <div className='w-52 rounded border-2 p-1'>
-                <audio ref={frenchAudioRef} id='audio' src={RP}/>
-                <audio ref={frenchEnglishAudioRef} id='audio2' src={RP}/>
+        {FR!= "" && FRRP!="" && RP!=""?
+            <div className='w-96 rounded border-2 p-1'>
+                <audio ref={frenchAudioRef} id='audio' src={FR}/>
+                <audio ref={frenchEnglishAudioRef} id='audio2' src={FRRP}/>
                 <audio ref={englishAudioRef} id='audio3' src={RP}/>
                 <div className='w-full rounded bg-white text-center mb-1' onClick={playAll}>▸</div>
                 <div className='grid grid-cols-3 gap-1 w-full'>

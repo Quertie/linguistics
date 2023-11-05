@@ -16,5 +16,8 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-orange-200'
+  ],
 }
 export default config
