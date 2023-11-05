@@ -4,7 +4,7 @@ import { useRef, useEffect, useState, MutableRefObject } from "react"
 
 const playingStyle= ['bg-orange-200', 'drop-shadow-md']
 
-function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|undefined>, transcriptionRef:MutableRefObject<HTMLDivElement|undefined>, callback?:CallableFunction)
+function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|null>, transcriptionRef:MutableRefObject<HTMLDivElement|null>, callback?:CallableFunction)
 {
     if (audioRef.current == null) return
         transcriptionRef.current?.classList.add(...playingStyle)
@@ -24,14 +24,14 @@ function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|undefined>, transc
 
 export function Example({Text, RP="", FrenchTrans="", FrenchRPTrans="", RPTrans=""}:{Text:string, RP?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string})
 {
-    const frenchAudioRef = useRef<HTMLAudioElement>();
-    const frenchTranscriptionRef = useRef<HTMLDivElement>();
+    const frenchAudioRef = useRef<HTMLAudioElement>(null);
+    const frenchTranscriptionRef = useRef<HTMLDivElement>(null);
 
-    const frenchEnglishAudioRef = useRef<HTMLAudioElement>();
-    const frenchEnglishTranscriptionRef = useRef<HTMLDivElement>();
+    const frenchEnglishAudioRef = useRef<HTMLAudioElement>(null);
+    const frenchEnglishTranscriptionRef = useRef<HTMLDivElement>(null);
 
-    const englishAudioRef = useRef<HTMLAudioElement>();
-    const englishTranscriptionRef = useRef<HTMLDivElement>();
+    const englishAudioRef = useRef<HTMLAudioElement>(null);
+    const englishTranscriptionRef = useRef<HTMLDivElement>(null);
 
     let playFrenchAudio = ()=>{
         PlayAudio(frenchAudioRef, frenchTranscriptionRef)
