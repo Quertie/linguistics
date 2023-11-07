@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <h2 className='text-xl pb-4'>Lessons</h2>
       <ul>
-        <Link href='./LongShortDoubleO'><li className='paragraph-block hover:bg-neutral-200'>Lesson 1: Fook vs. Goose ([ʊ]/[u:])</li></Link>
+        <Link href='./LongShortDoubleO'><li className='paragraph-block hover:bg-neutral-200'>Lesson 1: Foot vs. Goose ([ʊ]/[u:])</li></Link>
       </ul>
     </main>
   )
