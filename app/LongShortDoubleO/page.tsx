@@ -53,13 +53,13 @@ export default function LongShortDoubleO()
                 <p>Unfortunately you cannot always know when to use which, as English is not good at following rules when it comes to pronunciation.</p>
                 <p>Let&apos;s begin with presenting both sounds:</p>
                 <ul>
-                    <li><p className='list-item-title'>The [ʊ] sound</p>
+                    <li><p className='list-item-title'>The /ʊ/ sound</p>
                         <p className='list-item-detail'>It is <strong>short</strong>, and its realisation depends on the speaker&apos;s accent.<br/>
                         Speakers of RP English use the authentic [ʊ] sound, which is somewhere in between a French [ø] (⟨eu⟩, as in <i>jeu</i>) and [o] (as in <i>beau</i>).<br />
                         Speakers of SSB English use a more relaxed sound, [ɵ]/[ʏ], which is very close to the French [ø] (<i>jeu</i>), but slightly less rounded (same as in <i>jeu</i> but lips do not form an &quot;o&quot;)
                         </p>
                     </li>
-                    <li><p className='list-item-title'>The [u:] sound</p>
+                    <li><p className='list-item-title'>The /u:/ sound</p>
                         <p className='list-item-detail'>
                         It is <strong>long</strong>, and its realisation depends on the speaker&apos;s accent too.<br />
                         Speakers of RP English use the authentic [u:] sound, which is close to the French [y] (<i>rue</i>), but held longer.<br />
@@ -197,8 +197,7 @@ export default function LongShortDoubleO()
                                          RP={RPShortAudioPath('footers')} 
                                          FrenchTrans='[futœʁz]'
                                          FrenchRPTrans='[fʊtœʁz]'
-                                         RPTrans='[&apos;fʊt
-                            əz]'/></li>
+                                         RPTrans='[&apos;fʊtəz]'/></li>
                         </ul>
                     </li>
                     <li><h3>The [u:] sound</h3>
