@@ -167,7 +167,7 @@ export default function KitvsFleece()
                                          RPTrans='[gɹi:t]'/>
                             </li>
                             <li>
-                                <Example Text='Hit'
+                                <Example Text='Heat'
                                          FrenchTrans='[hit]'
                                          FrenchRPTrans='[hi:t]'
                                          RPTrans='[hi:t]'/>
