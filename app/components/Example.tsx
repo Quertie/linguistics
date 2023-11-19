@@ -8,7 +8,7 @@ let FrenchFlag = () => (<Image className='inline' src="/images/french-flag.jpg" 
 let EnglishFlag = () => (<Image className='inline' src="/images/english-flag.png" width={15} height={10} alt='GB'/>)
 
 const playingStyle= ['bg-orange-200', 'drop-shadow-md']
-const normalStyle= ['bg-white']
+const normalStyle= ['bg-white', 'hover:bg-gray-200']
 
 function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|null>, transcriptionRef:MutableRefObject<HTMLDivElement|null>, callback?:CallableFunction)
 {
@@ -64,11 +64,11 @@ export function Example({Text, FR="", FRRP= "", RP="", FrenchTrans="", FrenchRPT
                 <audio ref={frenchAudioRef} id='audio' src={FR}/>
                 <audio ref={frenchEnglishAudioRef} id='audio2' src={FRRP}/>
                 <audio ref={englishAudioRef} id='audio3' src={RP}/>
-                <div className='w-full rounded bg-white text-center mb-1' onClick={playAll}>▸</div>
+                <div className='w-full rounded bg-white text-center mb-1 cursor-pointer hover:bg-gray-200' onClick={playAll}><Image className='inline mb-1' src="/images/loudspeaker.png" width={15} height={15} alt=''/> Play all</div>
                 <div className=' grid sm:grid-cols-3 gap-1 w-full'>
-                    <div ref={frenchTranscriptionRef} className='flex-grow rounded bg-white text-center' onClick={playFrenchAudio}>{FrenchTrans}<br /><FrenchFlag /></div>
-                    <div ref={frenchEnglishTranscriptionRef} className='flex-grow rounded bg-white text-center' onClick={playFrenchEnglishAudio}>{FrenchRPTrans}<br /><FrenchFlag />→<EnglishFlag /></div>
-                    <div ref={englishTranscriptionRef} className='flex-grow rounded bg-white text-center' onClick={playEnglishAudio}>{RPTrans}<br /><EnglishFlag /></div>
+                    <div ref={frenchTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchAudio}>{FrenchTrans}<br /><FrenchFlag /></div>
+                    <div ref={frenchEnglishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchEnglishAudio}>{FrenchRPTrans}<br /><FrenchFlag />→<EnglishFlag /></div>
+                    <div ref={englishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playEnglishAudio}>{RPTrans}<br /><EnglishFlag /></div>
                 </div>
             </div>
             : null}
