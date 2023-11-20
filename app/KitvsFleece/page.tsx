@@ -37,9 +37,19 @@ function FRRPLongAudioPath(word:string)
     return LongAudioPath('FR-RP-' + word)
 }
 
+function FRSSBLongAudioPath(word:string)
+{
+    return LongAudioPath('FR-SSB-' + word)
+}
+
 function RPLongAudioPath(word:string)
 {
     return LongAudioPath('RP-' + word)
+}
+
+function SSBLongAudioPath(word:string)
+{
+    return LongAudioPath('SSB-' + word)
 }
 
 export default function KitvsFleece()
@@ -198,118 +208,157 @@ export default function KitvsFleece()
                                 <Example Text='Fleece'
                                          FR={FRLongAudioPath('fleece')}
                                          FRRP={FRRPLongAudioPath('fleece')}    
-                                         RP={RPLongAudioPath('fleece')}                    
+                                         RP={RPLongAudioPath('fleece')}
+                                         FRSSB={FRSSBLongAudioPath('fleece')}
+                                         SSB={SSBLongAudioPath('fleece')}
                                          FrenchTrans='[flis]'
                                          FrenchRPTrans='[fli:s]'
-                                         RPTrans='[fli:s]'/>
+                                         RPTrans='[fli:s]'
+                                         FrenchSSBTrans='[flɪjs]'
+                                         SSBTrans='[flɪjs]'/>
                             </li>
                             <li>
                                 <Example Text='Keep'
                                          FR={FRLongAudioPath('keep')}
                                          FRRP={FRRPLongAudioPath('keep')}
+                                         FRSSB={FRSSBLongAudioPath('keep')}
+                                         SSB={SSBLongAudioPath('keep')}
                                          RP={RPLongAudioPath('keep')}
                                          FrenchTrans='[kip]'
                                          FrenchRPTrans='[ki:p]'
-                                         RPTrans='[kʰi:p]'/>
+                                         RPTrans='[kʰi:p]'
+                                         FrenchSSBTrans='[kɪjp]'
+                                         SSBTrans='[kʰɪjp]'/>
                             </li>
                             <li>
                                 <Example Text='Beat'
                                          FR={FRLongAudioPath('beat')}
                                          FRRP={FRRPLongAudioPath('beat')}
                                          RP={RPLongAudioPath('beat')}
+                                         FRSSB={FRSSBLongAudioPath('beat')}
+                                         SSB={SSBLongAudioPath('beat')}
                                          FrenchTrans='[bit]'
                                          FrenchRPTrans='[bi:t]'
-                                         RPTrans='[bi:t]'/>
+                                         RPTrans='[bi:t]'
+                                         FrenchSSBTrans='[bɪjt]'
+                                         SSBTrans='[bɪjt]'/>
                             </li>
                             <li>
                                 <Example Text='Need'
                                          FR={FRLongAudioPath('need')}
                                          FRRP={FRRPLongAudioPath('need')}
                                          RP={RPLongAudioPath('need')}
+                                         FRSSB={FRSSBLongAudioPath('need')}
+                                         SSB={SSBLongAudioPath('need')}
                                          FrenchTrans='[nid]'
                                          FrenchRPTrans='[ni:d]'
-                                         RPTrans='[ni:d]'/>
+                                         RPTrans='[ni:d]'
+                                         FrenchSSBTrans='[nɪjd]'
+                                         SSBTrans='[nɪjd]'/>
                             </li>
                             <li>
                                 <Example Text='Be'
                                          FR={FRLongAudioPath('be')}
                                          FRRP={FRRPLongAudioPath('be')}
                                          RP={RPLongAudioPath('be')}
+                                         FRSSB={FRSSBLongAudioPath('be')}
+                                         SSB={SSBLongAudioPath('be')}
                                          FrenchTrans='[bi]'
                                          FrenchRPTrans='[bi:]'
-                                         RPTrans='[bi:]'/>
+                                         RPTrans='[bi:]'
+                                         FrenchSSBTrans='[bɪj]'
+                                         SSBTrans='[bɪj]'/>
                             </li>
                             <li>
                                 <Example Text='Sheet'
                                          FR={FRLongAudioPath('sheet')}
                                          FRRP={FRRPLongAudioPath('sheet')}
                                          RP={RPLongAudioPath('sheet')}
+                                         FRSSB={FRSSBLongAudioPath('sheet')}
+                                         SSB={SSBLongAudioPath('sheet')}
                                          FrenchTrans='[ʃit]'
                                          FrenchRPTrans='[ʃi:t]'
-                                         RPTrans='[ʃi:t]'/>
+                                         RPTrans='[ʃi:t]'
+                                         FrenchSSBTrans='[ʃɪjt]'
+                                         SSBTrans='[ʃɪjt]'/>
                             </li>
                             <li>
                                 <Example Text='Mead'
                                          FR={FRLongAudioPath('mead')}
                                          FRRP={FRRPLongAudioPath('mead')}
                                          RP={RPLongAudioPath('mead')}
+                                         FRSSB={FRSSBLongAudioPath('mead')}
+                                         SSB={SSBLongAudioPath('mead')}
                                          FrenchTrans='[mid]'
                                          FrenchRPTrans='[mi:d]'
-                                         RPTrans='[mi:d]'/>
+                                         RPTrans='[mi:d]'
+                                         FrenchSSBTrans='[mɪjd]'
+                                         SSBTrans='[mɪjd]'/>
                             </li>
                             <li>
                                 <Example Text='Read'
                                          FR={FRLongAudioPath('read')}
                                          FRRP={FRRPLongAudioPath('read')}
                                          RP={RPLongAudioPath('read')}
+                                         FRSSB={FRSSBLongAudioPath('read')}
+                                         SSB={SSBLongAudioPath('read')}
                                          FrenchTrans='[rid]'
                                          FrenchRPTrans='[ri:d]'
-                                         RPTrans='[ɹi:d]'/>
+                                         RPTrans='[ɹi:d]'
+                                         FrenchSSBTrans='[rɪjd]'
+                                         SSBTrans='[ɹɪjd]'/>
                             </li>
                             <li>
                                 <Example Text='Greet'
                                          FR={FRLongAudioPath('greet')}
                                          FRRP={FRRPLongAudioPath('greet')}
                                          RP={RPLongAudioPath('greet')}
+                                         FRSSB={FRSSBLongAudioPath('greet')}
+                                         SSB={SSBLongAudioPath('greet')}
                                          FrenchTrans='[grit]'
                                          FrenchRPTrans='[gri:t]'
-                                         RPTrans='[gɹi:t]'/>
+                                         RPTrans='[gɹi:t]'
+                                         FrenchSSBTrans='[grɪjt]'
+                                         SSBTrans='[gɹɪjt]'/>
                             </li>
                             <li>
                                 <Example Text='Heat'
                                          FR={FRLongAudioPath('heat')}
                                          FRRP={FRRPLongAudioPath('heat')}
                                          RP={RPLongAudioPath('heat')}
+                                         FRSSB={FRSSBLongAudioPath('heat')}
+                                         SSB={SSBLongAudioPath('heat')}
                                          FrenchTrans='[hit]'
                                          FrenchRPTrans='[hi:t]'
-                                         RPTrans='[hi:t]'/>
-                            </li>
-                            <li>
-                                <Example Text='Read'
-                                         FR={FRLongAudioPath('read')}
-                                         FRRP={FRRPLongAudioPath('read')}
-                                         RP={RPLongAudioPath('read')}
-                                         FrenchTrans='[rid]'
-                                         FrenchRPTrans='[ri:d]'
-                                         RPTrans='[ɹi:d]'/>
+                                         RPTrans='[hi:t]'
+                                         FrenchSSBTrans='[hɪjt]'
+                                         SSBTrans='[hɪjt]'/>
                             </li>
                             <li>
                                 <Example Text='Seat'
                                          FR={FRLongAudioPath('seat')}
                                          FRRP={FRRPLongAudioPath('seat')}
                                          RP={RPLongAudioPath('seat')}
+                                         FRSSB={FRSSBLongAudioPath('seat')}
+                                         SSB={SSBLongAudioPath('seat')}
                                          FrenchTrans='[sit]'
                                          FrenchRPTrans='[si:t]'
-                                         RPTrans='[si:t]'/>
+                                         RPTrans='[si:t]'
+                                         FrenchSSBTrans='[sɪjt]'
+                                         SSBTrans='[sɪjt]'/>
                             </li>
                             <li>
                                 <Example Text='Peace'
                                          FR={FRLongAudioPath('peace')}
                                          FRRP={FRRPLongAudioPath('peace')}
                                          RP={RPLongAudioPath('peace')}
+                                         FRSSB={FRSSBLongAudioPath('peace')}
+                                         SSB={SSBLongAudioPath('peace')}
                                          FrenchTrans='[pis]'
                                          FrenchRPTrans='[pi:s]'
-                                         RPTrans='[pi:s]'/>
+                                         RPTrans='[pʰi:s]'
+                                         FrenchSSBTrans='[pɪjs]'
+                                         SSBTrans='[pʰɪjs]'/>
                             </li>
                         </ul>
                     </li>

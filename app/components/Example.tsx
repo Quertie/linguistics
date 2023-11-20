@@ -1,75 +1,28 @@
 'use client'
 
-import { useRef, useEffect, useState, MutableRefObject } from "react"
-import Image from "next/image"
+import {AudioPlayer} from '../components/AudioPlayer'
 
-let FrenchFlag = () => (<Image className='inline' src="/images/french-flag.jpg" width={15} height={10} alt='FR'/>)
-
-let EnglishFlag = () => (<Image className='inline' src="/images/english-flag.png" width={15} height={10} alt='GB'/>)
-
-const playingStyle= ['bg-orange-200', 'drop-shadow-md']
-const normalStyle= ['bg-white', 'hover:bg-gray-200']
-
-function PlayAudio(audioRef:MutableRefObject<HTMLAudioElement|null>, transcriptionRef:MutableRefObject<HTMLDivElement|null>, callback?:CallableFunction)
+export function Example({Text, FR="", FRRP= "", RP="", FRSSB="", SSB="", FrenchTrans="", FrenchRPTrans="", RPTrans="", FrenchSSBTrans="", SSBTrans=""}:{Text:string, FR?:string, FRRP?:string, RP?:string, FRSSB?:string, SSB?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string, FrenchSSBTrans?:string, SSBTrans?:string})
 {
-    if (audioRef.current == null) return
-        transcriptionRef.current?.classList.add(...playingStyle)
-        transcriptionRef.current?.classList.remove(...normalStyle)
-        // Add time update handler
-        audioRef.current.ontimeupdate = () => {
-            if (audioRef.current == null) return
-            if (audioRef.current?.currentTime >= audioRef.current?.duration)
-            {
-                transcriptionRef.current?.classList.remove(...playingStyle);
-                transcriptionRef.current?.classList.add(...normalStyle)
-                // Remove time update handler
-                audioRef.current.ontimeupdate = null;
-                if (callback != null) callback();
-            }
-        }
-        audioRef.current?.play();
-}
+    var shouldDisplayRPAudio = FR!="" && FRRP!="" && RP!="";
+    var shouldDisplaySSBAudio = FR!="" && FRSSB!="" && SSB!="";
 
-export function Example({Text, FR="", FRRP= "", RP="", FrenchTrans="", FrenchRPTrans="", RPTrans=""}:{Text:string, FR?:string, FRRP?:string, RP?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string})
-{
-    const frenchAudioRef = useRef<HTMLAudioElement>(null);
-    const frenchTranscriptionRef = useRef<HTMLDivElement>(null);
-
-    const frenchEnglishAudioRef = useRef<HTMLAudioElement>(null);
-    const frenchEnglishTranscriptionRef = useRef<HTMLDivElement>(null);
-
-    const englishAudioRef = useRef<HTMLAudioElement>(null);
-    const englishTranscriptionRef = useRef<HTMLDivElement>(null);
-
-    let playFrenchAudio = ()=>{
-        PlayAudio(frenchAudioRef, frenchTranscriptionRef)
-    }
-
-    let playFrenchEnglishAudio = ()=>{
-        PlayAudio(frenchEnglishAudioRef, frenchEnglishTranscriptionRef)
-    }
-
-    let playEnglishAudio = ()=>{
-        PlayAudio(englishAudioRef, englishTranscriptionRef)
-    }
-
-    let playAll = ()=>{
-        PlayAudio(frenchAudioRef, frenchTranscriptionRef, ()=>{PlayAudio(frenchEnglishAudioRef, frenchEnglishTranscriptionRef, ()=>{PlayAudio(englishAudioRef, englishTranscriptionRef)})})
-    }
-    
     return (
-        <div className='mt-1 grid sm:grid-cols-3'>{Text}
-        {FR!= "" && FRRP!="" && RP!=""?
-            <div className='w-full sm:w-96 rounded border-2'>
-                <audio ref={frenchAudioRef} id='audio' src={FR}/>
-                <audio ref={frenchEnglishAudioRef} id='audio2' src={FRRP}/>
-                <audio ref={englishAudioRef} id='audio3' src={RP}/>
-                <div className='w-full rounded bg-white text-center mb-1 cursor-pointer hover:bg-gray-200' onClick={playAll}><Image className='inline mb-1' src="/images/loudspeaker.png" width={15} height={15} alt=''/> Play all</div>
-                <div className=' grid sm:grid-cols-3 gap-1 w-full'>
-                    <div ref={frenchTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchAudio}>{FrenchTrans}<br /><FrenchFlag /></div>
-                    <div ref={frenchEnglishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchEnglishAudio}>{FrenchRPTrans}<br /><FrenchFlag />→<EnglishFlag /></div>
-                    <div ref={englishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playEnglishAudio}>{RPTrans}<br /><EnglishFlag /></div>
-                </div>
+        <div className='mt-1 grid md:grid-cols-4 mt-1'>{Text}
+        {shouldDisplayRPAudio?
+            <div className='md:w-fit'>
+                {shouldDisplaySSBAudio?
+                    <div className='text-center bg-gray-200 rounded mb-1'>RP</div>
+                    :null}
+                <AudioPlayer FrTranscription={FrenchTrans} FrEnTranscription={FrenchRPTrans} EnTranscription={RPTrans} FrAudioPath={FR} FrEnAudioPath={FRRP} EnAudioPath={RP} />
+            </div>
+            : null}
+        {shouldDisplaySSBAudio?
+            <div className='md:w-fit mt-1'>
+                {shouldDisplayRPAudio?
+                    <div className='text-center bg-gray-200 rounded mb-1'>SSB</div>
+                    :null}
+                <AudioPlayer FrTranscription={FrenchTrans} FrEnTranscription={FrenchSSBTrans} EnTranscription={SSBTrans} FrAudioPath={FR} FrEnAudioPath={FRSSB} EnAudioPath={SSB} />
             </div>
             : null}
         </div>
