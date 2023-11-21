@@ -31,7 +31,7 @@ export class ExampleData
 
 export function GetExamplesAsList(exampleData:ExampleData[], folderNameInAudioFolder:string)
 {
-    const items = exampleData.map((d) => 
+    const items = exampleData.map((d, i, a) => 
         <li>
             <Example Text={d.Text}
                      FR={AudioPath("FR-"+d.WordReference, folderNameInAudioFolder)}
