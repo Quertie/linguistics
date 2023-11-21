@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useState, MutableRefObject } from "react"
+import { useRef, MutableRefObject } from "react"
 import Image from "next/image"
 
 let FrenchFlag = () => (<Image className='inline' src="/images/french-flag.jpg" width={15} height={10} alt='FR'/>)
@@ -65,9 +65,9 @@ export function AudioPlayer({FrAudioPath, FrEnAudioPath, EnAudioPath, FrTranscri
                 <audio ref={englishAudioRef} id='audio3' src={EnAudioPath}/>
                 <div className='w-full rounded bg-white text-center mb-1 cursor-pointer hover:bg-gray-200' onClick={playAll}><Image className='inline mb-1' src="/images/loudspeaker.png" width={15} height={15} alt=''/> Play all</div>
                 <div className=' grid md:grid-cols-3 gap-1 w-full'>
-                    <div ref={frenchTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchAudio}>{FrTranscription}<br /><FrenchFlag /></div>
-                    <div ref={frenchEnglishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchEnglishAudio}>{FrEnTranscription}<br /><FrenchFlag />→<EnglishFlag /></div>
-                    <div ref={englishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playEnglishAudio}>{EnTranscription}<br /><EnglishFlag /></div>
+                    <div ref={frenchTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchAudio}>[{FrTranscription}]<br /><FrenchFlag /></div>
+                    <div ref={frenchEnglishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playFrenchEnglishAudio}>[{FrEnTranscription}]<br /><FrenchFlag />→<EnglishFlag /></div>
+                    <div ref={englishTranscriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playEnglishAudio}>[{EnTranscription}]<br /><EnglishFlag /></div>
                 </div>
             </div>
     )

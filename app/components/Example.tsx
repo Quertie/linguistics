@@ -2,10 +2,10 @@
 
 import {AudioPlayer} from '../components/AudioPlayer'
 
-export function Example({Text, FR="", FRRP= "", RP="", FRSSB="", SSB="", FrenchTrans="", FrenchRPTrans="", RPTrans="", FrenchSSBTrans="", SSBTrans=""}:{Text:string, FR?:string, FRRP?:string, RP?:string, FRSSB?:string, SSB?:string, FrenchTrans?:string, FrenchRPTrans?:string, RPTrans?:string, FrenchSSBTrans?:string, SSBTrans?:string})
+export function Example({Text, FR="", FRRP= "", RP="", FRSSB="", SSB="", FrenchTrans="", FrenchRPTrans="", RPTrans="", FrenchSSBTrans="", SSBTrans=""}:{Text:string, FR:string, FRRP:string, RP:string, FRSSB:string, SSB:string, FrenchTrans:string, FrenchRPTrans:string, RPTrans:string, FrenchSSBTrans:string, SSBTrans:string})
 {
-    var shouldDisplayRPAudio = FR!="" && FRRP!="" && RP!="";
-    var shouldDisplaySSBAudio = FR!="" && FRSSB!="" && SSB!="";
+    var shouldDisplayRPAudio = FR!="" && FRRP!="" && RP!="" && FrenchTrans!="" && FrenchRPTrans!="" && RPTrans!="";
+    var shouldDisplaySSBAudio = FR!="" && FRSSB!="" && SSB!="" && FrenchTrans!="" && FrenchSSBTrans!="" && SSBTrans!="";
 
     return (
         <div className='mt-1 grid md:grid-cols-4 mt-1'>{Text}
