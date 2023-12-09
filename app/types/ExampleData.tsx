@@ -4,6 +4,7 @@ const AudioFolder = 'audio/';
 
 function AudioPath(word:string, folderNameInAudioFolder:string)
     {
+        if (folderNameInAudioFolder == '') return ''
         return AudioFolder + folderNameInAudioFolder + "/" + word + '.mp3';
     }
 

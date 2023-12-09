@@ -9,7 +9,7 @@ export const ShortExamples = [
     new ExampleData('Rid', 'rid', 'ʁid', 'ʁɪd', 'ɹɪd', '', ''),
     new ExampleData('Grit', 'grit', 'gʁit', 'gʁɪt', 'gɹɪt', '', ''),
     new ExampleData('Hit', 'hit', 'hit', 'hɪt', 'hɪt', '', ''),
-    new ExampleData('Little', 'little', 'litəl', 'lɪtəl', '\'lɪtl', '', ''),
+    new ExampleData('Little', 'little', 'litəl', 'lɪtəl', '\'lɪtɫ', '', ''),
     new ExampleData('Big', 'big', 'big', 'bɪg', 'bɪg', '', ''),
     new ExampleData('Will', 'will', 'wil', 'wɪl', 'wɪɫ', '', ''),
     new ExampleData('Sit', 'sit', 'sit', 'sɪt', 'sɪt', '', ''),
