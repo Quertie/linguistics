@@ -14,7 +14,7 @@ export default function ClearVsDarkL()
                 <li>
                         <p className='list-item-title'>Clear L [l]</p>
                         <p className='list-item-detail'>
-                            Light L is used when <strong>followed by a pronounced vowel</strong> (this <strong>excludes</strong> silent vowels like the ending e in "style")
+                            Light L is used when <strong>followed by a pronounced vowel</strong> (this <strong>excludes</strong> silent vowels like the ending e in &quot;style&quot;)
                         </p>
                     </li>
                     <li>
@@ -24,7 +24,7 @@ export default function ClearVsDarkL()
                             The consonant [ɫ] is realised by sticking the tip of the tongue on the back of the gum and raising the back of the tongue.<br />
                             <Image className='inline w-full sm:w-fit' src="/images/clear-dark-l.webp" width="400" height="200" alt='clear vs dark l'/><br />
                             Some people realise dark L by pronouncing a [w] sound (less posh)<br />
-                            With this pronuncitation, "howl" [hæwɫ]/[hæw] sounds the same as "how" [hæw].
+                            With this pronuncitation, &quot;howl&quot; [hæwɫ]/[hæw] sounds the same as &quot;how&quot; [hæw].
                         </p>
                     </li>
                 </ul>
