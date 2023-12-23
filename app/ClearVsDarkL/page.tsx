@@ -33,10 +33,10 @@ export default function ClearVsDarkL()
             <div className='paragraph-block examples-paragraph'>
                 <ul>
                     <li><h3>Clear L ([l])</h3>
-                        {GetExamplesAsList(ShortExamples, '')}
+                        {GetExamplesAsList(ShortExamples, 'ClearVsDarkL/Clear L')}
                     </li>
                     <li><h3>Dark L ([ɫ])</h3>
-                        {GetExamplesAsList(LongExamples, '')}
+                        {GetExamplesAsList(LongExamples, 'ClearVsDarkL/Dark L')}
                     </li>
                     <li><h3>Example sentences</h3>
                         <ul>

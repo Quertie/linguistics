@@ -72,3 +72,22 @@ export function AudioPlayer({FrAudioPath, FrEnAudioPath, EnAudioPath, FrTranscri
             </div>
     )
 }
+
+export function SimpleAudioPlayer({AudioPath, Transcription}:{AudioPath:string, Transcription:string})
+{
+    const simpleAudioRef = useRef<HTMLAudioElement>(null);
+    const transcriptionRef = useRef<HTMLDivElement>(null);
+
+    let playSimpleAudio = ()=>{
+        PlayAudio(simpleAudioRef, transcriptionRef)
+    }
+
+    return (
+        <div className='w-full md:w-96 rounded border-2'>
+                <audio ref={simpleAudioRef} id='audio3' src={AudioPath}/>
+                <div className='w-full'>
+                    <div ref={transcriptionRef} className='flex-grow rounded bg-white text-center cursor-pointer hover:bg-gray-200' onClick={playSimpleAudio}>[{Transcription}]<br /><EnglishFlag /></div>
+                </div>
+            </div>
+    )
+}
