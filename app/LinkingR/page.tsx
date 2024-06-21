@@ -1,5 +1,5 @@
 import { GetExamplesAsList } from "../types/ExampleData"
-import { UnpronouncedRExamples, LinkingRExamples} from "./Examples"
+import { UnpronouncedRExamples, LinkingRExamples, WordsEndingInRExamples, CounterExamples, WordsNonEndingInRExamples} from "./Examples"
 
 export default function LinkingR()
 {
@@ -15,28 +15,21 @@ export default function LinkingR()
                         <p className='list-item-detail'>
                             Words ending with an r like &quot;doctor&quot;, &quot;car&quot;, &quot;clear&quot;, &quot;more&quot;, will feature a linking r if they are followed by a vowel sound.<br /></p>
                         <p className='list-item-detail'>
-                            Examples:<br />
-                            <i>the doctor‿and I</i><br />
-                            <i>the car‿is outside</i><br />
-                            <i>the clear‿atmosphere</i><br />
-                            <i>the more‿I know</i><br />
-                        </p>
+                            Examples:</p>
+                            {GetExamplesAsList(WordsEndingInRExamples, 'LinkingR')}
                         <p className='list-item-detail'>
                             The important thing to note in these examples is that the <strong>following sound</strong> is a vowel.<br />
                         </p>
                         
                         <p className='list-item-title'>Importance of the following sound</p>
                         <p className='list-item-detail'>
-                            If the following sound is not a vowel, then the /r/ is not pronounced.<br />
-                            This includes consonants, as well as the /j/ (&quot;yes&quot;) and /w/ (&quot;won&quot;) sounds
+                            If the following sound is a <strong>consonant</strong>, a <strong>/j/</strong> (&quot;yes&quot;) or a <strong>/w/</strong> (&quot;won&quot;) sound, then the /r/ is <strong>not pronounced</strong>.
                         </p>
                         <p className='list-item-detail'>
-                            Counter-examples:<br />
-                            <i>the doctor takes checks</i> (no /r/ after <i>doctor</i>)<br/>
-                            <i>the car wash</i> (no /r/ after <i>car</i>)<br />
-                            <i>clear your settings</i> (no /r/ after <i>clear</i>)<br />
-                            <i>more library features !</i> (no /r/ after <i>more</i>)
+                            Counter-examples (no linking r):<br />
                         </p>
+                        {GetExamplesAsList(CounterExamples, 'LinkingR')}
+                        
 
                         <p className='list-item-title'>Words that do not end in r</p>
                         <p className='list-item-detail'>
@@ -46,10 +39,8 @@ export default function LinkingR()
                         </p>
                         <p className='list-item-detail'>
                             Examples:<br />
-                            <i>Barbara‿r‿is nice</i><br />
-                            <i>Papa‿r‿is in the kitchen</i> (because Papa is pronounced &quot;puh-pah&quot;)<br />
-                            <i>Arkensas‿r‿is in the USA</i> (because Arkensas is pronounced &quot;Ar-ken-saw&quot;)
                         </p>
+                        {GetExamplesAsList(WordsNonEndingInRExamples, 'LinkingR')}
                         <p className='list-item-detail'>
                             Counter-examples:<br />
                             <i>The boy is here</i> (no /r/ after &quot;boy&quot;)<br />
