@@ -64,7 +64,6 @@ export default function LinkingR()
             <h2 className='text-xl pb-2'>References</h2>
             <div className='paragraph-block'>
                 <ul>
-                    <a href='http://cube.elte.hu/accent.html'><li><div className='hover:bg-neutral-200'>The accent of CUBE</div></li></a>
                     <a href='https://www.englishspeechservices.com/blog/linking-r/'><li><div className='hover:bg-neutral-200'>Linking r (Goeff Lyndsay)</div></li></a>
                 </ul>
             </div>

@@ -50,7 +50,7 @@ export default function KitvsFleece()
             <h2 className='text-xl pb-2'>References</h2>
             <div className='paragraph-block'>
                 <ul>
-                    <a href='http://cube.elte.hu/accent.html'><li><div className='hover:bg-neutral-200'>The accent of CUBE</div></li></a>
+                    <a href='http://seas.elte.hu/cube/accent.html'><li><div className='hover:bg-neutral-200'>The accent of CUBE</div></li></a>
                     <a href='https://youtu.be/GNpbv7hJf6c?si=R8hW_tcK6Iwyqkoj'><li><div className='hover:bg-neutral-200'>Short vs long i - Dr Geoff Lindsey (YouTube)</div></li></a>
                 </ul>
             </div>
