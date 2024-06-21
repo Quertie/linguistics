@@ -1,3 +1,6 @@
+import { GetExamplesAsList } from "../types/ExampleData"
+import { UnpronouncedRExamples, LinkingRExamples} from "./Examples"
+
 export default function LinkingR()
 {
     return (
@@ -60,63 +63,10 @@ export default function LinkingR()
             <div className='paragraph-block examples-paragraph'>
                 <ul>
                     <li><h3>Unpronounced r</h3>
-                        <table>
-                            <tr>
-                                <td>Far</td>
-                                <td>/fɑ:/</td>
-                            </tr>
-                            <tr>
-                                <td>For</td>
-                                <td>/fo:/</td>
-                            </tr>
-                            <tr>
-                                <td>Professor</td>
-                                <td>/pɹə&apos;fɛsə/</td>
-                            </tr>
-                            <tr>
-                                <td>Your</td>
-                                <td>/jo:/</td>
-                            </tr>
-                            <tr>
-                                <td>Saw</td>
-                                <td>/so:/</td>
-                            </tr>
-                            <tr>
-                                <td>Sore</td>
-                                <td>/so:/</td>
-                            </tr>
-                        </table>
+                    {GetExamplesAsList(UnpronouncedRExamples, 'LinkingR')}
                     </li>
                     <li><h3>With linking r</h3>
-                    <table>
-                            <tr>
-                                <td>Far east</td>
-                                <td>/&apos;fɑ:&apos;ɹi:st/</td>
-                            </tr>
-                            <tr>
-                                <td>For example</td>
-                                <td>/fo:ɹɪ&apos;kzɑ:mpł/<br />
-                                    /fəɹə&apos;kzɑ:mpł/<br />
-                                    /fɹə&apos;kzɑ:mpł/</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>Professor of psychology</td>
-                                <td>/pɹə&apos;fɛsəɹ əv saj&apos;kɒlədji:/</td>
-                            </tr>
-                            <tr>
-                                <td>Your eyes</td>
-                                <td>/jə &apos;ɹajz/</td>
-                            </tr>
-                            <tr>
-                                <td>I Saw it</td>
-                                <td>/aj &apos;so:ɹɪt/</td>
-                            </tr>
-                            <tr>
-                                <td>Sore eyes</td>
-                                <td>/&apos;so: &apos;rajz/</td>
-                            </tr>
-                        </table>
+                    {GetExamplesAsList(LinkingRExamples, 'LinkingR')}
                     </li>
                 </ul>
             </div>
