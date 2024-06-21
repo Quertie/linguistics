@@ -36,4 +36,5 @@ export const LinkingRExamples = [
     new ExampleData('Your‿eyes', 'your_eyes', '', '', 'jo:‿ɹ‿\'ɑjz', '', ''),
     new ExampleData('I saw‿r‿it', 'i_saw_it', '', '', 'aj \'so:‿ɹ‿ɪt', '', ''),
     new ExampleData('Sore‿eyes', 'sore_eyes', '', '', 'so:‿ɹ‿\'ɑjz', '', ''),
+    new ExampleData('AR‿R', 'ARR', '', '', 'ɛjɑ:‿ɹ‿ɑ:', '', ''),
 ]
