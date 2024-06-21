@@ -11,7 +11,7 @@ export const CounterExamples = [
     new ExampleData('The doctor takes checks', 'the_doctor_takes_checks', '', '', 'ðə \'dɒktə tɛjks \'tʃɛks', '', ''),
     new ExampleData('The car wash', 'the_car_wash', '', '', 'ðə \'kʰɑ: wɒʃ', '', ''),
     new ExampleData('Clear your settings', 'clear_your_settings', '', '', '\'klɪə jo: \'sɛtɪŋs', '', ''),
-    new ExampleData('More library features!', 'more_library_features', '', '', '\'mo: \'lɑjbrərɪj: \'fɪj:tʃəz', '', ''),
+    new ExampleData('More library features!', 'more_library_features', '', '', '\'mo: \'lɑjbɹəɹɪj: \'fɪj:tʃəz', '', ''),
 ]
 
 export const WordsNonEndingInRExamples = [
