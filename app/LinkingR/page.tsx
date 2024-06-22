@@ -1,5 +1,10 @@
 import { GetExamplesAsList } from "../types/ExampleData"
-import { UnpronouncedRExamples, LinkingRExamples, WordsEndingInRExamples, CounterExamples, WordsNonEndingInRExamples} from "./Examples"
+import { UnpronouncedRExamples,
+         LinkingRExamples,
+         WordsEndingInRExamples,
+         CounterExamples,
+         WordsNonEndingInRExamples,
+         OtherCounterExamples} from "./Examples"
 
 export default function LinkingR()
 {
@@ -42,11 +47,8 @@ export default function LinkingR()
                         </p>
                         {GetExamplesAsList(WordsNonEndingInRExamples, 'LinkingR')}
                         <p className='list-item-detail'>
-                            Counter-examples:<br />
-                            <i>The boy is here</i> (no /r/ after &quot;boy&quot;)<br />
-                            <i>How are you</i> (no /r/ after &quot;how&quot;, no /r/ after &quot;are&quot;)<br />
-                            <i>Hey Elizabeth!</i> (no /r/ after &quot;Hey&quot;)
-                        </p>
+                            Counter-examples:</p>
+                        {GetExamplesAsList(OtherCounterExamples, 'LinkingR')}
                     </li>
                 </ul>
             </div>

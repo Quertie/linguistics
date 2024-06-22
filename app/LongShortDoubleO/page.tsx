@@ -1,3 +1,4 @@
+import { Warning } from "../components/Alerts";
 import { GetExamplesAsList } from "../types/ExampleData";
 import { LongExamples, ShortExamples } from "./Examples"
 
@@ -5,6 +6,7 @@ export default function LongShortDoubleO()
 {
     return (
         <main>
+            <Warning Message="The part on Goose /u:/ is bullshit. Do not take it into account until i make a better version."/><br />
             <h1 className='text-2xl'>Foot vs Goose ([ʊ]/[u:])</h1>
             <h2 className='text-xl pb-2'>Lesson summary</h2>
             <div className='paragraph-block lesson-paragraph'>
