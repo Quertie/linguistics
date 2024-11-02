@@ -9,6 +9,7 @@ export default function Home() {
         <Link href='./KitvsFleece'><li className='paragraph-block hover:bg-neutral-200'>Lesson 2: Kit vs. Fleece ([ɪ]/[i:])</li></Link>
         <Link href='./ClearVsDarkL'><li className='paragraph-block hover:bg-neutral-200'>Lesson 3: Clear vs. Dark L ([l]/[ɫ])</li></Link>
         <Link href='./LinkingR'><li className='paragraph-block hover:bg-neutral-200'>Lesson 4: Linking r</li></Link>
+        <Link href='./Aspiration'><li className='paragraph-block hover:bg-neutral-200'>Lesson 5: Aspiration</li></Link>
       </ul>
     </main>
   )
