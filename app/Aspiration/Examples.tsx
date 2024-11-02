@@ -42,3 +42,9 @@ export const ExamplesWork = [
     new ExampleData('Pane', 'pane', '', '', 'pʰɛjn', '', ''),
     new ExampleData('Publish', 'publish', '', '', '\'pʰʌblɪʃ', '', ''),
 ]
+
+export const TongueTwisters = [
+    new ExampleData('Betty botter bought some butter. But she said the butter\'s bitter, "If I put it in my batter, it will make my batter bitter. But a bit of better butter - that would make my batter better.', 'betty', '', '', '🔊', '', ''),
+    new ExampleData('Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked.', 'peter', '', '', '🔊', '', ''),
+    new ExampleData('A cupcake cook in a cupcake cook’s cap cooks cupcakes', 'cupcake', '', '', '🔊', '', '')
+]

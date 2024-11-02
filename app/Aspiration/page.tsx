@@ -1,5 +1,5 @@
 import { GetExamplesAsList } from "../types/ExampleData"
-import { FirstExamples, FirstExamplesNoAspiration, StressedSyllable, BeginningWord, NoAspiration, ExamplesWork } from "./Examples"
+import { FirstExamples, FirstExamplesNoAspiration, StressedSyllable, BeginningWord, NoAspiration, ExamplesWork, TongueTwisters } from "./Examples"
 import Image from "next/image"
 
 export default function ClearVsDarkL()
@@ -46,6 +46,10 @@ export default function ClearVsDarkL()
                     <li>
                         <h3>Examples for work</h3>
                         {GetExamplesAsList(ExamplesWork, 'Aspiration')}
+                    </li>
+                    <li>
+                        <h3>Tongue twisters</h3>
+                        {GetExamplesAsList(TongueTwisters, 'Aspiration')}
                     </li>
                 </ul>
                 
