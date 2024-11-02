@@ -63,6 +63,21 @@ export default function ClearVsDarkL()
                             </ul>
                         </p>
                     </li>
+                    <li>
+                        <p className='list-item-title'>Examples for work</p>
+                        <p className='list-item-detail'>
+                            <ul>
+                                <li>PowerPoint [&apos;pʰaʊəpʰojnt]</li>
+                                <li>Title [&apos;tʰɑjtɫ]</li>
+                                <li>Table [&apos;tʰɛjbɫ]</li>
+                                <li>Custom [&apos;kʰʌstəm]</li>
+                                <li>Template [&apos;tʰɛmplɛjt]</li>
+                                <li>Tools [&apos;tʰu:lz]</li>
+                                <li>Pane [&apos;pʰɛjn]</li>
+                                <li>Publish [&apos;pʰʌblɪʃ]</li>
+                            </ul>
+                        </p>
+                    </li>
                 </ul>
             </div>
             <h2 className='text-xl pb-2'>Examples</h2>
@@ -74,13 +89,20 @@ export default function ClearVsDarkL()
                     <li><h3>Dark L ([ɫ])</h3>
                         {GetExamplesAsList(LongExamples, 'ClearVsDarkL/Dark L')}
                     </li>
-                    <li><h3>Example sentences</h3>
+                    <li><h3>Tongue twisters</h3>
                         <ul>
-                            <li>Will you help me?</li>
-                            <li>I will send you an email</li>
-                            <li>When I have cleared the slides</li>
+                            <li>Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked.                            </li>
+                            <li>Betty Botter bought some butter. But she said the butter&apos;s bitter, “If I put it in my batter. It will make my batter bitter, But a bit of better butter.- that would make my batter better.</li>
+                            <li>A cupcake cook in a cupcake cook&apos;s cap cooks cupcakes.</li>
                         </ul>
                     </li>
+                </ul>
+            </div>
+            <h2 className='text-xl pb-2'>References</h2>
+            <div className='paragraph-block'>
+                <ul>
+                    <a href='https://home.cc.umanitoba.ca/~krussll/phonetics/narrower/aspiration.html'><li><div className='hover:bg-neutral-200'>Aspiration (Canadian website)</div></li></a>
+                    <a href='https://www.youtube.com/watch?v=6PSdlctYBsw'><li><div className='hover:bg-neutral-200'>Aspiration (video by Geoff Lyndsey)</div></li></a>
                 </ul>
             </div>
         </main>
